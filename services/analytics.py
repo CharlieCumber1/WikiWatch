@@ -9,7 +9,10 @@ def load_data():
 
 def calculate_stats() -> dict:
     data = load_data()
+
     return {
+        "firstEdit": str(data["created"].min()),
+        "lastEdit": str(data["created"].max()),
         "editCount": len(data.index),
         "uniqueUsers": len(data["user"].value_counts()),
         "topCountries": data["country"].value_counts(dropna=True).head(10).to_dict(),

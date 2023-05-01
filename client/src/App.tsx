@@ -41,6 +41,14 @@ const App = (): JSX.Element => {
         {connected && stats ? (
           <Grid>
             <Card columns={1} rows={1}>
+              <Title>First</Title>
+              <Legend>{stats.firstEdit}</Legend>
+            </Card>
+            <Card columns={1} rows={1}>
+              <Title>Last</Title>
+              <Legend>{stats.lastEdit}</Legend>
+            </Card>
+            <Card columns={1} rows={1}>
               <Title>{numberFormatter(stats.editCount, 2)}</Title>
               <Legend>Edit count</Legend>
             </Card>

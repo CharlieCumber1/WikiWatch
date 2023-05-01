@@ -1,4 +1,6 @@
 export type WikiStatistics = {
+  firstEdit: string
+  lastEdit: string
   editCount: number
   uniqueUsers: number
   topCountries: {
