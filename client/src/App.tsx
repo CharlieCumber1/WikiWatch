@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from './components/Card';
+import Grid from './components/Grid';
 import Page from './components/Page';
 import GlobalStyle from './components/GlobalStyle';
 import Header from './components/Header';
@@ -9,7 +11,25 @@ const App = (): JSX.Element => {
     <Page>
       <GlobalStyle/>
       <Header>WikiWatch</Header>
-      <Content>Page Content</Content>
+      <Content>
+        <Grid>
+          <Card columns={1} rows={2}>
+            Card Content
+          </Card>
+          <Card columns={3} rows={3}>
+            Card Content
+          </Card>
+          <Card columns={1} rows={1}>
+            Card Content
+          </Card>
+          <Card columns={2} rows={2}>
+            Card Content
+          </Card>
+          <Card columns={2} rows={2}>
+            Card Content
+          </Card>
+        </Grid>
+      </Content>
     </Page>
   );
 }

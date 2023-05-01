@@ -4,7 +4,7 @@ import {
   ThemeProps,
   css,
 } from 'styled-components';
-import { minScreenWidthPxForColumns } from './columns';
+import { minScreenWidthPxForColumns } from './gridSizes';
 
 export const breakpoints = {
   fourColumns: minScreenWidthPxForColumns(4),

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colours from '../../helpers/colours';
-import { minScreenWidthForColumns } from '../../helpers/columns';
+import { minScreenWidthForColumns } from '../../helpers/gridSizes';
 
 const Page = styled.div`
   min-height: 100vh;

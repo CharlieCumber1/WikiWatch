@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentWidthForColumns } from '../../helpers/columns';
+import { contentWidthForColumns } from '../../helpers/gridSizes';
 import { mediaQuery } from '../../helpers/mediaQuery';
 
 export const OuterWrapper = styled.div`
