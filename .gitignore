@@ -136,4 +136,10 @@ cython_debug/
 # Jetbrains IDE Settings
 .idea
 
+# Creat React App Ignore
+
+client/node_modules
+client/build
+
+
 # End of https://www.toptal.com/developers/gitignore/api/flask

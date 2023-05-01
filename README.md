@@ -9,14 +9,26 @@ docker for running the local database.
 - [Python 3.10](https://www.python.org/)
 - [Poetry](https://python-poetry.org/docs/)
 - [Docker](https://docs.docker.com/desktop/install/windows-install/)
+- [Node.js](https://nodejs.org/en)
 
 ### Dependencies
 
-The project uses a virtual environment to isolate package dependencies. To create the virtual environment and install 
+#### Backend
+
+The backend uses a virtual environment to isolate package dependencies. To create the virtual environment and install 
 required packages, run the following from your preferred shell:
 
 ```bash
 poetry install
+```
+
+#### Frontend
+
+The frontend client requires node modules to be installed:
+
+```bash
+$ cd client
+$ npm install
 ```
 
 ### Local environment variables
@@ -53,3 +65,13 @@ running the following from the project root:
 $ poetry run flask run
 ```
 
+### Frontend
+
+Once the backend is running, in a new terminal start the frontend client:
+
+```bash
+$ cd client
+$ npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
