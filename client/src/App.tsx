@@ -42,6 +42,10 @@ const App = (): JSX.Element => {
               <Title>{numberFormatter(stats.editCount, 2)}</Title>
               <Legend>Edit count</Legend>
             </Card>
+            <Card columns={1} rows={1}>
+              <Title>{numberFormatter(stats.uniqueUsers, 2)}</Title>
+              <Legend>Unique users</Legend>
+            </Card>
           </Grid>
         ) : (
           <div>Attempting to create connection with backend...</div>

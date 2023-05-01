@@ -11,4 +11,5 @@ def calculate_stats() -> dict:
     data = load_data()
     return {
         "editCount": len(data.index),
+        "uniqueUsers": len(data["user"].value_counts()),
     }

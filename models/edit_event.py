@@ -42,7 +42,7 @@ class EditEvent(db.Model):
             is_new=message.get("is_new"),
             is_minor=message.get("is_minor"),
             is_unpatrolled=message.get("is_unpatrolled"),
-            user=message.get("user") if not message.get("is_anon") else None,
+            user=message.get("user"),
             city=geo_data.get("city") if geo_data else None,
             country=geo_data.get("country_name") if geo_data else None,
             region=geo_data.get("region_name") if geo_data else None,
