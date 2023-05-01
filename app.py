@@ -5,6 +5,7 @@ from flask import Flask
 from config.flask import FlaskConfig
 from models import db, migrate
 from services.wiki_listener import WikiListener
+from sockets import socketio
 
 
 def create_app():
@@ -13,6 +14,7 @@ def create_app():
 
     db.init_app(app)
     migrate.init_app(app, db)
+    socketio.init_app(app)
 
     wiki_listener = WikiListener(app)
 

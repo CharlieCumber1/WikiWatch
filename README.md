@@ -19,7 +19,7 @@ required packages, run the following from your preferred shell:
 poetry install
 ```
 
-### Local Environment
+### Local environment variables
 
 You'll also need to clone a new `.env` file from the `.env.template` to store local configuration options. This is a
 one-time operation on first setup:
@@ -41,3 +41,15 @@ To initialise the database tables run:
 ```bash
 poetry run flask db upgrade
 ```
+
+## Running locally
+
+### Backend
+
+Once the all dependencies have been installed, start the Flask app in development mode within the Poetry environment by
+running the following from the project root:
+
+```bash
+$ poetry run flask run
+```
+

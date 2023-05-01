@@ -14,6 +14,7 @@ python-dotenv = "^1.0.0"
 mysql = "^0.0.3"
 websockets = "^11.0.2"
 pytz = "^2023.3"
+flask-socketio = "^5.3.3"
 
 
 [build-system]

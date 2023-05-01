@@ -5,6 +5,7 @@ import websockets
 
 from helpers.exceptions import UnexpectedActionException
 from models.edit_event import EditEvent
+from sockets import broadcast_stats
 
 
 class WikiListener(threading.Thread):
@@ -19,6 +20,7 @@ class WikiListener(threading.Thread):
                 message = await ws.recv()
                 try:
                     EditEvent.from_wiki_message(message).save()
+                    broadcast_stats()
 
                 except UnexpectedActionException:
                     pass
