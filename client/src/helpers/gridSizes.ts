@@ -20,6 +20,6 @@ export const contentWidthForColumns = (columns: number): Pixels => appendPx(cont
 
 const rowHeightPx = 150;
 
-const contentHeightPxForRows = (rows: number): number => (gutterWidthPx * (rows - 1)) + (rows * rowHeightPx);
+export const contentHeightPxForRows = (rows: number): number => (gutterWidthPx * (rows - 1)) + (rows * rowHeightPx);
 
 export const contentHeightForRows = (rows: number): Pixels => appendPx(contentHeightPxForRows(rows));

@@ -12,4 +12,6 @@ def calculate_stats() -> dict:
     return {
         "editCount": len(data.index),
         "uniqueUsers": len(data["user"].value_counts()),
+        "topCountries": data["country"].value_counts(dropna=True).head(10).to_dict(),
+        "topCities": data["city"].value_counts(dropna=True).head(10).to_dict(),
     }

@@ -1,4 +1,4 @@
-type HexColourCode = `#${string}`;
+export type HexColourCode = `#${string}`;
 
 type Colours = {
   [name: string]: HexColourCode
@@ -12,6 +12,7 @@ const colours: Colours = {
   teal: '#4FCDB0',
   green: '#8DB92E',
   beige: '#E3DFD7',
+  grey: '#a0a0a0',
   white: '#ffffff',
   black: '#111111',
 };
