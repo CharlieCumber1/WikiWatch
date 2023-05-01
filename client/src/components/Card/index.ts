@@ -14,9 +14,13 @@ const maxColumns = (props: CardStyleProps, max: number): number => {
 }
 
 const Card = styled.div<CardStyleProps>`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: ${colours.white};
   border-radius: 5px;
   padding: 10px;
+  text-align: center;
   
   height: ${({ rows }) => contentHeightForRows(rows)};
 
