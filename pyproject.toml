@@ -7,6 +7,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+flask = "^2.3.1"
+flask-sqlalchemy = "^3.0.3"
+flask-migrate = "^4.0.4"
+python-dotenv = "^1.0.0"
+mysql = "^0.0.3"
 
 
 [build-system]
