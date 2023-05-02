@@ -15,7 +15,7 @@ const maxColumns = (props: CardStyleProps, max: number): number => {
 
 const Card = styled.div<CardStyleProps>`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background-color: ${colours.white};

@@ -9,6 +9,7 @@ import {
 } from 'recharts';
 import colours from '../../helpers/colours';
 import { WikiStatistics } from '../../helpers/statistics';
+import useRenderedColumnsWidth from '../../helpers/useRenderedColumnsWidth';
 import Card from '../Card';
 import Legend from '../Legend';
 import Title from '../Title';
@@ -19,11 +20,13 @@ type ChangeDeltaTimelineProps = {
 
 const ChangeDeltaTimeline = (props: ChangeDeltaTimelineProps): JSX.Element => {
   const { data } = props;
+  const columns = 6;
+  const contentWidth = useRenderedColumnsWidth(columns)
 
   return (
-    <Card columns={6} rows={4}>
+    <Card columns={columns} rows={4}>
       <Title>Change over the last 20 minutes</Title>
-      <LineChart width={900} height={450} data={data}>
+      <LineChart width={(contentWidth - 20)} height={400} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
           allowDataOverflow

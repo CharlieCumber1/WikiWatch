@@ -4,6 +4,7 @@ import {
   contentHeightPxForRows,
   contentWidthPxForColumns
 } from '../../helpers/gridSizes';
+import useRenderedColumnsWidth from '../../helpers/useRenderedColumnsWidth';
 import Card from '../Card';
 import Legend from '../Legend';
 import Title from '../Title';
@@ -22,13 +23,15 @@ type BarChartProps = {
 const BarChart = (props: BarChartProps): JSX.Element => {
   const { title, legend, colour, columns, rows, data } = props;
 
+  const contentWidth = useRenderedColumnsWidth(columns)
+
   const dataList = Object.keys(data).map((key) => ({
     name: key,
     count: data[key],
   }));
 
   const graphHeight = contentHeightPxForRows(rows) - (title ? 70 : 20) - (legend ? 30 : 0);
-  const graphWidth = contentWidthPxForColumns(columns) - 40;
+  const graphWidth = contentWidth - 40;
   const yAxisLabelWidth = graphWidth / 3;
 
   return (

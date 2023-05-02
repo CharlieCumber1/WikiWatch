@@ -2,11 +2,22 @@ import styled from 'styled-components';
 import { columnWidth, gutterWidth } from '../../helpers/gridSizes';
 import { mediaQuery } from '../../helpers/mediaQuery';
 
+export const SmallGrid = styled.div`
+  display: grid;
+  grid-gap: ${gutterWidth};
+
+  grid-template-columns: repeat(2, ${columnWidth});
+  grid-template-rows: repeat(2, ${columnWidth});
+
+  grid-column: span 2;
+  grid-row: span 2;
+`;
+
 const Grid = styled.div`
   display: grid;
   grid-gap: ${gutterWidth};
 
-  grid-template-rows: repeat(2, ${columnWidth});
+  grid-template-columns: repeat(2, ${columnWidth});
 
   ${mediaQuery.fourColumns`
     grid-template-columns: repeat(4, ${columnWidth});

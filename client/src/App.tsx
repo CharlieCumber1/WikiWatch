@@ -3,7 +3,7 @@ import BarChart from './components/BarChart';
 import BooleanPieChart from './components/BooleanPieChart';
 import Card from './components/Card';
 import ChangeDeltaTimeline from './components/ChangeDeltaTimeline';
-import Grid from './components/Grid';
+import Grid, { SmallGrid } from './components/Grid';
 import Legend from './components/Legend';
 import Page from './components/Page';
 import GlobalStyle from './components/GlobalStyle';
@@ -42,22 +42,24 @@ const App = (): JSX.Element => {
       <Content>
         {connected && stats ? (
           <Grid>
-            <Card columns={1} rows={1}>
-              <Title>First</Title>
-              <Legend>{stats.firstEdit}</Legend>
-            </Card>
-            <Card columns={1} rows={1}>
-              <Title>Last</Title>
-              <Legend>{stats.lastEdit}</Legend>
-            </Card>
-            <Card columns={1} rows={1}>
-              <Title>{numberFormatter(stats.editCount, 2)}</Title>
-              <Legend>Edit count</Legend>
-            </Card>
-            <Card columns={1} rows={1}>
-              <Title>{numberFormatter(stats.uniqueUsers, 2)}</Title>
-              <Legend>Unique users</Legend>
-            </Card>
+            <SmallGrid>
+              <Card columns={1} rows={1}>
+                <Title>First</Title>
+                <Legend>{stats.firstEdit}</Legend>
+              </Card>
+              <Card columns={1} rows={1}>
+                <Title>Last</Title>
+                <Legend>{stats.lastEdit}</Legend>
+              </Card>
+              <Card columns={1} rows={1}>
+                <Title>{numberFormatter(stats.editCount, 2)}</Title>
+                <Legend>Edit count</Legend>
+              </Card>
+              <Card columns={1} rows={1}>
+                <Title>{numberFormatter(stats.uniqueUsers, 2)}</Title>
+                <Legend>Unique users</Legend>
+              </Card>
+            </SmallGrid>
             <BooleanPieChart
               title="Edits by user status"
               data={stats.anonymous}
@@ -105,7 +107,7 @@ const App = (): JSX.Element => {
                 title="Edit count by country"
                 legend="Only anonymous users included"
                 data={stats.topCountries}
-                columns={4}
+                columns={3}
                 rows={4}
                 colour={colours.orange}
               />
