@@ -26,7 +26,7 @@ def get_change_delta_sample(data, start_time: datetime) -> dict | None:
     return {
         "label": start_time.strftime("%H:%M"),
         "timestamp": start_time.timestamp(),
-        "diff": int(data[(data["created"] > start_time) & (data["created"] < end_time)]["change_size"].sum()),
+        "diff": int(data[(data["created"] >= start_time) & (data["created"] < end_time)]["change_size"].sum()),
         "runningTotal": int(data[data["created"] < end_time]["change_size"].sum()),
     }
 

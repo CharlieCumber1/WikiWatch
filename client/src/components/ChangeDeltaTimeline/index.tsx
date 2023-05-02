@@ -44,7 +44,7 @@ const ChangeDeltaTimeline = (props: ChangeDeltaTimelineProps): JSX.Element => {
         <YAxis
           yAxisId="2"
           orientation="right"
-          domain={[0, 'dataMax + 10000']}
+          domain={['dataMin - 10000', 'dataMax + 10000']}
           allowDataOverflow
           type="number"
         />
